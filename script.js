@@ -39,6 +39,12 @@ function addItem() {
     document.getElementById('productQuantity').value = '';
 }
 
+function updateChange() {
+    const amountPaid = parseFloat(document.getElementById('amountPaid').value) || 0;
+    const change = amountPaid - total;
+    document.getElementById('change').innerText = `Rp ${change >= 0 ? change.toLocaleString() : '0.00'}`;
+}
+
 function completeSale() {
     const amountPaid = parseFloat(document.getElementById('amountPaid').value) || 0;
     if (total <= 0) {

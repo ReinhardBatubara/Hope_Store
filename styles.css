@@ -6,32 +6,38 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 800px;
     margin: auto;
     overflow: hidden;
-    padding: 30px;
-    background: rgb(247, 247, 247);
+    padding: 20px;
+    background: #fff;
     margin-top: 30px;
     box-shadow: 0 0 10px rgba(135, 47, 137, 0.1);
+    border-radius: 8px;
 }
 
 h1 {
     text-align: center;
     color: #a441d6;
+    margin-bottom: 20px;
 }
 
-.product {
+.product, .payment {
     margin-bottom: 15px;
 }
 
-.product label {
-    display: inline-block;
-    width: 150px;
+.product label, .payment label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.product input {
-    width: calc(100% - 160px);
-    padding: 5px;
+.product input, .payment input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 button {
@@ -42,20 +48,23 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 4px;
 }
 
 button:hover {
-    background: #a441d6;
+    background: #9328b0;
 }
 
 .cart {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 th, td {
@@ -64,36 +73,49 @@ th, td {
     border-bottom: 1px solid #ddd;
 }
 
+th {
+    background-color: #f4f4f4;
+}
+
 h3 {
     text-align: right;
     margin-top: 20px;
 }
 
-.payment {
-    margin-top: 20px;
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
 }
 
-.payment label {
-    display: inline-block;
-    width: 150px;
-}
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
 
-.payment input {
-    width: calc(100% - 160px);
-    padding: 5px;
-}
+    h1 {
+        font-size: 24px;
+    }
 
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background: #a441d6;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-}
+    .product input, .payment input, select {
+        padding: 6px;
+    }
 
-button:hover {
-    background: #a441d6;
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    table, th, td {
+        font-size: 12px;
+    }
 }
