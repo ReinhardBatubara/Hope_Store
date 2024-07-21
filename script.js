@@ -38,7 +38,7 @@ function addItem() {
     document.getElementById('productPrice').value = '';
     document.getElementById('productQuantity').value = '';
 }
-
+//
 function completeSale() {
     const amountPaid = parseFloat(document.getElementById('amountPaid').value) || 0;
     if (total <= 0) {
