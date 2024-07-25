@@ -32,7 +32,7 @@ function addItem() {
     cartBody.appendChild(newRow);
 
     total += productPrice * productQuantity;
-    document.getElementById('totalPrice').innerText = `Rp ${total.toLocaleString()}`;
+    document.getElementById('totalPrice').innerText = ` ${total.toLocaleString()}`;
 
     document.getElementById('productName').selectedIndex = 0;
     document.getElementById('productPrice').value = '';
