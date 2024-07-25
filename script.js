@@ -32,13 +32,13 @@ function addItem() {
     cartBody.appendChild(newRow);
 
     total += productPrice * productQuantity;
-    document.getElementById('totalPrice').innerText = ` ${total.toLocaleString()}`;
+    document.getElementById('totalPrice').innerText = `${total.toLocaleString()}`;
 
     document.getElementById('productName').selectedIndex = 0;
     document.getElementById('productPrice').value = '';
     document.getElementById('productQuantity').value = '';
 }
-//
+
 function completeSale() {
     const amountPaid = parseFloat(document.getElementById('amountPaid').value) || 0;
     if (total <= 0) {
@@ -51,18 +51,18 @@ function completeSale() {
     }
 
     const change = amountPaid - total;
-    document.getElementById('change').innerText = `Rp ${change.toLocaleString()}`;
+    document.getElementById('change').innerText = ` ${change.toLocaleString()}`;
 
     alert(`Sale completed! Total: Rp ${total.toLocaleString()}, Change: Rp ${change.toLocaleString()}`);
 }
 
 function reset() {
     total = 0;
-    document.getElementById('totalPrice').innerText = 'Rp 0.00';
+    document.getElementById('totalPrice').innerText = '0.00';
     document.getElementById('cartBody').innerHTML = '';
     document.getElementById('productName').selectedIndex = 0;
     document.getElementById('productPrice').value = '';
     document.getElementById('productQuantity').value = '';
     document.getElementById('amountPaid').value = '';
-    document.getElementById('change').innerText = 'Rp 0.00';
+    document.getElementById('change').innerText = '0.00';
 }
